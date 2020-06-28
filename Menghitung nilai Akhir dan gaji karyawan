@@ -1,0 +1,106 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+#include <iomanip>
+
+int main()
+{
+	cout<<"\n\n\t\t---------------------------------------";
+	cout<<"\n\t\t|      FAKULTAS ILMU KOMPPUTER        |";
+	cout<<"\n\t\t|         TEKNIK INFORMATIKA          |";
+	cout<<"\n\t\t---------------------------------------";
+	cout<<"\n\t\t|      PROGRAM NILAI AKHIR MAHASISWA  |";
+	cout<<"\n\t\t|        ALGORITMA PEMROGRAMAN 2      |";
+	cout<<"\n\t\t---------------------------------------\n";
+	getch();
+	
+	int jml;
+	cout<<"\nMasukkan Jumlah Mahasiswa  :";
+	cin>>jml;
+	
+	char nama[50][100];
+	int tugas[50];
+	int uts[50];
+	int uas[50];
+	int tugasproyek[50];
+	int kehadiran[50];
+	int akhir[50];
+	string grade[50];
+
+	for(int i=0; i<jml; i++)
+	{
+		cout<<"\n"<<endl;
+		cout<<"\tMAHASISWA KE-"<<i+1<<endl;
+		cout<<"\t-----------------------\n"<<endl;
+		cout<<"\tNAMA         : ";
+		cin>>nama[i];
+		cout<<"\tNILAI TUGAS  : ";
+		cin>>tugas[i];
+		cout<<"\tNILAI UTS    : ";
+		cin>>uts[i];
+		cout<<"\tNILAI UAS    : ";
+		cin>>uas[i];
+		cout<<"\tTUGAS PROYEK : ";
+		cin>>tugasproyek[i];
+		cout<<"\tKEHADIRAN    : ";
+		cin>>kehadiran[i];
+
+		akhir[i]=(tugas[i]*0.20)+(uts[i]*0.20)+(uas[i]*0.25)+(tugasproyek[i]*0.20)+(kehadiran[i]*0.15);
+
+			if (akhir[i]<=45){
+	  	   grade[i] = "E";				
+			}
+	  	   else if (akhir[i]<=50){
+	  	   grade[i] = "D";
+			}
+	  	   else if (akhir[i]<=61){
+	  	   grade[i] = "C+";
+			}
+	  	   else if (akhir[i]<=66){
+	  	   grade[i] = "B-";
+			}
+	  	   else if (akhir[i]<=71){
+	  	   grade[i] = "B";
+			}
+	  	   else if (akhir[i]<=76){
+	  	   grade[i] = "B+";
+			}
+	  	   else if (akhir[i]<=81){
+	  	   grade[i] = "A-";
+			}
+	  	   else if (akhir[i]<=100){
+	  	   grade[i] = "A+";
+			}
+	  	cout<<endl;
+	}
+	getch();
+	
+	cout<<"-----------------------------------------------------------"<<endl;
+	cout<<"|===============  NILAI AKHIR MAHASISWA  =================|"<<endl;
+	cout<<"|=================  TEKNIK INFOMATIKA  ===================|"<<endl;
+	cout<<"-----------------------------------------------------------"<<endl;
+	cout<<"|======================  NILAI  ==========================|"<<endl;
+	cout<<"|---------------------------------------------------------|"<<endl;
+	cout<<"|---------------------------------------------------------|"<<endl;
+	for (int i=0;i<jml; i++)
+	  {
+	  	cout<<"Nama Mahasiswa		: "<< nama[i]<<endl;
+	  	cout<<"Nilai Tugas		: "<<tugas[i]<<endl;
+	  	cout<<"Nilai UTS		: "<<uts[i]<<endl;
+	  	cout<<"Nilai UAS		: "<< uas[i]<<endl;
+	  	cout<<"Nilai Tugas Proyek	: "<<tugasproyek[i]<<endl;
+	  	cout<<"Nilai Kehadiran		: "<<kehadiran[i]<<endl;
+	  	cout<<"Total Nilai Akhir	: "<<akhir[i]<<endl;
+	  	cout<<"Grade Mahasiswa		: "<<grade[i]<<endl;
+	  	
+	  	cout<<endl;
+	  	
+
+	  }
+	  cout<<"-----------------------------------------------------------------------------"<<endl;
+	  cout<<"\n\tTotal Mahasiswa :"<<jml<<endl;
+	  
+	
+	
+	
+}
